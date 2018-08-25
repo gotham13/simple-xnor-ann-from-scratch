@@ -83,7 +83,7 @@ class NeuralNetwork:
         outputs = self.vectorized_func(outputs)
         targets = numpy.array(target_list)
 
-        #BACKPROPOGATION ALGO
+        # BACKPROPOGATION ALGO
         output_errors = numpy.subtract(targets, outputs)
         gradients = self.vectorized_derivative(outputs)
         gradients = numpy.multiply(gradients, output_errors)
